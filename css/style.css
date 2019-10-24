@@ -1,0 +1,15 @@
+html {
+  height: 100vh; }
+
+body {
+  margin: auto auto;
+  display: grid;
+  background-color: black;
+  height: 100vmin;
+  grid-template-columns: repeat(auto-fit, minmax(16px, 1fr));
+  grid-auto-rows: 16px;
+  grid-auto-flow: dense; }
+  body .square {
+    border: 1px solid black; }
+
+/*# sourceMappingURL=style.css.map */
