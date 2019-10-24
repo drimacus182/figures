@@ -22,7 +22,7 @@
 
         function getRandomColor() {
             var colors = ['#fff', '#000'];
-            return colors[Math.floor(Math.random()*2)];
+            return colors[Math.floor(Math.random()*colors.length)];
         }
 
         function changeColors() {
@@ -33,13 +33,16 @@
             }
         }
 
-        for (var i=0; i< 4096; i++) {
+        function addBlock(){
             var newDiv = document.createElement("div");
             newDiv.className = 'square';
             document.body.appendChild(newDiv)
         }
 
-        setInterval(changeColors, 100)
+        for (var i=0; i < 1024; i++) {
+            addBlock()
+        }
+        setInterval(function(){changeColors();}, 200)
 
     </script>
 </body>
