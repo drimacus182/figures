@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>----</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+</head>
+<body>
+
+
+    <script>
+
+//        function getRandomColor() {
+//            var letters = '0123456789ABCDEF';
+//            var color = '#';
+//            for (var i = 0; i < 6; i++) {
+//                color += letters[Math.floor(Math.random() * 16)];
+//            }
+//            return color;
+//        }
+
+        function getRandomColor() {
+            var colors = ['#fff', '#000'];
+            return colors[Math.floor(Math.random()*2)];
+        }
+
+        function changeColors() {
+            var els = document.getElementsByClassName('square');
+
+            for (let el of els) {
+                el.style.backgroundColor = getRandomColor();
+            }
+        }
+
+        for (var i=0; i< 4096; i++) {
+            var newDiv = document.createElement("div");
+            newDiv.className = 'square';
+            document.body.appendChild(newDiv)
+        }
+
+        setInterval(changeColors, 100)
+
+    </script>
+</body>
+</html>
